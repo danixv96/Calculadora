@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.Scanner;
 
 /**
  * The test class CalculadoraTest.
@@ -33,7 +34,13 @@ public class CalculadoraTest
     }
 
     public void  testSuma() { 
-
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Introduce el primer número: ");
+        int num1 = teclado.nextInt();
+        System.out.print( "Introduce el segundo número: " );
+        int num2 = teclado.nextInt();
+        System.out.print( "Su suma es: " );
+        System.out.println(n1+n2);
           
     }
     /**
