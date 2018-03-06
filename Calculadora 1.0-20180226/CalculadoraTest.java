@@ -14,8 +14,8 @@ import java.util.Scanner;
  */
 public class CalculadoraTest
 { 
-    private int num1;
-    private int num2;
+    private int op1;
+    private int op2;
     private int rdo;
     private Operacion op;
     
@@ -33,23 +33,9 @@ public class CalculadoraTest
     {
     }
 
-    public void  testSuma() { 
-        Scanner teclado = new Scanner(System.in);
-        System.out.print("Introduce el primer número: ");
-        int num1 = teclado.nextInt();
-        System.out.print( "Introduce el segundo número: " );
-        int num2 = teclado.nextInt();
-        System.out.print( "Su suma es: " );
-        System.out.println(n1+n2);
-          
-    }
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
     @After
-    public void tearDown()
+    public void suma()
     {
+    
     }
 }
