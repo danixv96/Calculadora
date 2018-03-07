@@ -11,56 +11,49 @@
 public class Calculadora
 {
     // instance variables - replace the example below with your own
-    private static Scanner;
-
+    private int num1;
+    private int num2;
+    private int rdo;
+    private Operacion op;
     /**
      * Constructor for objects of class Calculadora
      */
-    public static int suma(int op1,intop2)
+    public Calculadora()
     {
-        // initialise instance variables
-        return op1+op2;
-        
+    num1=0;
+    num2=0;
+    op=op.SUMA      
     }
     
-    public static int multiplicacion(int op1,into op2)
-    {
-        // put your code here
-        return op1*op2;
-        
-    }
-    
-    public void op2(int n2)
+    public void n1(int n1)
     {
         // put your code here
-        this.op2=n2;
+    this.num1=n1;
     }
-public static void main(string[] args)
-{
-    int op1=0;
-    int op2=0;
-    int rdo=0;
-    char opc=S;
     
-    reader = new Scanner (System.in);
-    
-    op1 = lee("primer numero: ");
-    op2 = lee("segundo numero: ");
+    public void n2(int n2)
+    {
+        // put your code here
+    this.num2=n2;
+    }
+
+    public void opera()
+    {
     
         switch(opc){
-            case S:
+            case SUMA:
                 rdo=suma(op1op2);
                 break;
-            case 2:
+            case RESTA:
                 rdo=op1-op2;
                 break;
-            case 3:
+            case MULTIPLICA:
                 rdo=op1*op2;
                 break;
-            case 4:
+            case DIVIDE:
                 rdo=op1/op2;
                 break;
-            case 5:
+            case POTENCIA:
             if (op2 > 1){
             for( int c=1 ;  c < op2 ;  c ++){
                 if( c == 1){
@@ -74,24 +67,25 @@ public static void main(string[] args)
             else 
                     rdo=op1;
    }
-}
+  }
+ }
 
     public void ponOperacion(String opera){
         switch(opera){
         
-        case "S":
-            op=op.suma;
+        case "SUMA":
+            op=op.SUMA;
             break;
-        case "2":
+        case "RESTA":
             op=op.RESTA;
             break;
-        case "3":
+        case "MULTIPLICA":
             op=op.MULTIPLICA;
             break;
-        case "4":
+        case "DIVIDE":
             op=op.DIVIDE;
             break;
-        case "5":
+        case "POTENCIA":
             op=op.POTENCIA;
             break;
         }
@@ -102,5 +96,13 @@ public static void main(string[] args)
         // put your code here
         return rdo;
     }
+
+    public void muestraTodosResultados(){
+        System.out.println("Num1="+Integer.toString(num1)+" Num2=" + Integer.toString(num2));
+        System.out.println("Suma :" + Integer.toString(num1+num2));
+        System.out.println("Resta :"+ Integer.toString(num1-num2));
+        System.out.println("Multiplica :" + Integer.toString(num1*num2));
+        System.out.println("Divide :"+ Integer.toString(num1/num2));
+}
     
 }

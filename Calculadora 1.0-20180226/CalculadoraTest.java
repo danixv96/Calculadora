@@ -14,10 +14,7 @@ import java.util.Scanner;
  */
 public class CalculadoraTest
 { 
-    private int op1;
-    private int op2;
-    private int rdo;
-    private Operacion op;
+
     
     public CalculadoraTest()
     {
@@ -36,6 +33,21 @@ public class CalculadoraTest
     @After
     public void suma()
     {
-    
+    Calculadora calculadora = new Calculadora();
+    calculadora.n1(2);
+    calculadora.n2(4);
+    calculadora.ponOperacion("SUMA");
+    calculadora.opera();
+    assertEquals(6, calculadora.dameResultado());
+    }
+
+    public void resta()
+    {
+    Calculadora calculadora = new Calculadora();
+    calculadora.n1(10);
+    calculadora.n2(6);
+    calculadora.ponOperacion("RESTA");
+    calculadora.opera();
+    assertEquals(4, calculadora.dameResultado());
     }
 }
