@@ -30,7 +30,7 @@ public class CalculadoraTest
     {
     }
 
-    @After
+    @Test
     public void suma()
     {
     Calculadora calculadora = new Calculadora();
@@ -39,8 +39,27 @@ public class CalculadoraTest
     calculadora.ponOperacion("SUMA");
     calculadora.opera();
     assertEquals(6, calculadora.dameResultado());
-    }
 
+    calculadora.n1(-2);
+    calculadora.n2(-4);
+    calculadora.ponOperacion("SUMA");
+    calculadora.opera();
+    assertEquals(-6, calculadora.dameResultado());
+ 
+    calculadora.n1(-2);
+    calculadora.n2(4);
+    calculadora.ponOperacion("SUMA");
+    calculadora.opera();
+    assertEquals(2, calculadora.dameResultado());
+
+    calculadora.n1(0);
+    calculadora.n2(-3);
+    calculadora.ponOperacion("SUMA");
+    calculadora.opera();
+    assertEquals(-3, calculadora.dameResultado());
+    }
+	
+    @Test
     public void resta()
     {
     Calculadora calculadora = new Calculadora();
@@ -49,5 +68,23 @@ public class CalculadoraTest
     calculadora.ponOperacion("RESTA");
     calculadora.opera();
     assertEquals(4, calculadora.dameResultado());
+
+    calculadora.n1(-10);
+    calculadora.n2(-6);
+    calculadora.ponOperacion("RESTA");
+    calculadora.opera();
+    assertEquals(-4, calculadora.dameResultado());
+
+    calculadora.n1(0);
+    calculadora.n2(2);
+    calculadora.ponOperacion("RESTA");
+    calculadora.opera();
+    assertEquals(-2, calculadora.dameResultado());
+
+    calculadora.n1(2);
+    calculadora.n2(0);
+    calculadora.ponOperacion("RESTA");
+    calculadora.opera();
+    assertEquals(2, calculadora.dameResultado());
     }
 }
