@@ -87,4 +87,33 @@ public class CalculadoraTest
     calculadora.opera();
     assertEquals(2, calculadora.dameResultado());
     }
+
+    @Test
+    public void multiplicacion()
+    {
+    Calculadora calculadora = new Calculadora();
+    calculadora.n1(2);
+    calculadora.n2(4);
+    calculadora.ponOperacion("MULTIPLICACION");
+    calculadora.opera();
+    assertEquals(8, calculadora.dameResultado());
+
+    calculadora.n1(-2);
+    calculadora.n2(-3);
+    calculadora.ponOperacion("MULTIPLICACION");
+    calculadora.opera();
+    assertEquals(6, calculadora.dameResultado());
+
+    calculadora.n1(2);
+    calculadora.n2(0);
+    calculadora.ponOperacion("MULTIPLICACION");
+    calculadora.opera();
+    assertEquals(0, calculadora.dameResultado());
+
+    calculadora.n1(-5);
+    calculadora.n2(4);
+    calculadora.ponOperacion("MULTIPLICACION");
+    calculadora.opera();
+    assertEquals(-20, calculadora.dameResultado());
+    }
 }
