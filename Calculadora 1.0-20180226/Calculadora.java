@@ -11,9 +11,9 @@
 public class Calculadora
 {
     // instance variables - replace the example below with your own
-    private int num1;
-    private int num2;
-    private int rdo;
+    private double num1;
+    private double num2;
+    private double rdo;
     private Operacion op;
     /**
      * Constructor for objects of class Calculadora
@@ -25,13 +25,13 @@ public class Calculadora
     op=op.SUMA      
     }
     
-    public void n1(int n1)
+    public void n1(double n1)
     {
         // put your code here
     this.num1=n1;
     }
     
-    public void n2(int n2)
+    public void n2(double n2)
     {
         // put your code here
     this.num2=n2;
@@ -97,12 +97,12 @@ public class Calculadora
         return rdo;
     }
 
-    public void muestraTodosResultados(){
+/*    public void muestraTodosResultados(){
         System.out.println("Num1="+Integer.toString(num1)+" Num2=" + Integer.toString(num2));
         System.out.println("Suma :" + Integer.toString(num1+num2));
         System.out.println("Resta :"+ Integer.toString(num1-num2));
         System.out.println("Multiplica :" + Integer.toString(num1*num2));
         System.out.println("Divide :"+ Integer.toString(num1/num2));
-}
+} */
     
 }

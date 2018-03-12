@@ -94,26 +94,54 @@ public class CalculadoraTest
     Calculadora calculadora = new Calculadora();
     calculadora.n1(2);
     calculadora.n2(4);
-    calculadora.ponOperacion("MULTIPLICACION");
+    calculadora.ponOperacion("MULTIPLICA");
     calculadora.opera();
     assertEquals(8, calculadora.dameResultado());
 
     calculadora.n1(-2);
     calculadora.n2(-3);
-    calculadora.ponOperacion("MULTIPLICACION");
+    calculadora.ponOperacion("MULTIPLICA");
     calculadora.opera();
     assertEquals(6, calculadora.dameResultado());
 
     calculadora.n1(2);
     calculadora.n2(0);
-    calculadora.ponOperacion("MULTIPLICACION");
+    calculadora.ponOperacion("MULTIPLICA");
     calculadora.opera();
     assertEquals(0, calculadora.dameResultado());
 
     calculadora.n1(-5);
     calculadora.n2(4);
-    calculadora.ponOperacion("MULTIPLICACION");
+    calculadora.ponOperacion("MULTIPLICA");
     calculadora.opera();
     assertEquals(-20, calculadora.dameResultado());
+    }
+    
+    @Test
+    public void division
+    {
+    calculadora.n1(8);
+    calculadora.n2(2);
+    calculadora.ponOperacion("DIVIDE");
+    calculadora.opera();
+    assertEquals(4, calculadora.dameResultado());
+  
+    calculadora.n1(-9);
+    calculadora.n2(3);
+    calculadora.ponOperacion("DIVIDE");
+    calculadora.opera();
+    assertEquals(-3, calculadora.dameResultado());
+
+    calculadora.n1(0);
+    calculadora.n2(0);
+    calculadora.ponOperacion("DIVIDE");
+    calculadora.opera();
+    assertEquals(0, calculadora.dameResultado());
+
+    calculadora.n1(-6);
+    calculadora.n2(-4);
+    calculadora.ponOperacion("DIVIDE");
+    calculadora.opera();
+    assertEquals(1.5, calculadora.dameResultado());
     }
 }
